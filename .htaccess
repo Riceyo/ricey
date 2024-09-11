@@ -1,0 +1,11 @@
+Options -Indexes
+
+ErrorDocument 400 http://ricey.org/
+ErrorDocument 401 http://ricey.org/
+ErrorDocument 403 http://ricey.org/
+ErrorDocument 404 http://ricey.org/
+ErrorDocument 500 http://ricey.org/
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.ricey\.org$ [NC]
+RewriteRule ^(.*)$ http://ricey.org/$1 [R=301,L]
